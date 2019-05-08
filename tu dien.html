@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
 <body>
+<h3>English</h3>
+<input id="input" type="text">
+<button onclick="dich()">Tiếng Việt</button>
 <script>
-  let v=prompt("nhap tu can tim kiem: ");
-  let English= ["number","planes"];
-  let Vietnam= ["con số","máy bay"];
-  for (let i=0;i<English.length;i++) {
-    if (v==English[i]) {
-      alert(Vietnam[i]);
-      break;
-    } else {
-      alert("ko thay");
-      break;
+  function dich() {
+    let input = document.getElementById("input").value;
+    let en = ["english", "bye", "love"];
+    let vn = ["tiếng việt", "tạm biệt", "tình yêu"];
+    let kq = true;
+    for (let i = 0; i < en.length; i++) {
+      if (input === en[i]) {
+        alert(vn[i]);
+        kq = false;
+      }
+    }
+    if (kq) {
+      alert("ko tim thay");
     }
   }
 </script>
